@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Updates: SoloBird Academy</title>
+</head>
+<body>
+
+
+      <!-- Link to Google Fonts for Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Apply Poppins font to body, h1, h2, h3, and p */
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600; /* Use heavier weight for headings */
+    }
+
+    p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400; /* Regular weight for paragraphs */
+    }
+  </style>
+
+    <h2>Course Updates: SoloBird Academy</h2>
+    <p id="protected-content" style="display:none;">
+      This is some protected content that is only visible if the correct password is entered.
+    </p>
+    
+    <script>
+      // The SHA-256
+      const correctHash = "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"; // Pre-hashed password for "mypassword"
+    
+      // Function to hash the input password using SHA-256
+      async function hashPassword(password) {
+        const encoder = new TextEncoder();
+        const data = encoder.encode(password);
+        const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        return hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+      }
+    
+      // Prompt user for password
+      const password = prompt("Enter password to access this page:");
+    
+      // Hash the entered password and compare it with the stored hash
+      hashPassword(password).then(hashedPassword => {
+        if (hashedPassword === correctHash) {
+          // Show protected content if the hashed password matches
+          document.getElementById("protected-content").style.display = "block";
+        } else {
+          alert("Incorrect password!");
+        }
+      });
+    </script>
+
+
+
+
+
+
+<footer>
+
+ <!-- Code for last modified date -->
+  <p id="lastModified">Last Modified: Loading...</p>
+
+  <script>
+    // Get the last modified date from the document object
+    const lastModified = document.lastModified;
+    
+    // Set the content of the paragraph with the last modified date
+    document.getElementById("lastModified").textContent = "Last Modified: " + lastModified;
+  </script>
+
+</footer>
+
+</body>
+</html>
