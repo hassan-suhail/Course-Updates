@@ -105,11 +105,30 @@ header {
 
 
     <h1>Course Updates: SoloBird Academy</h1>
-    <p id="protected-content" "style="display:none;">
+    <p id="protected-content" style=display:none;>
         <h2>Current Course: <a href="https://www.udemy.com/course/git-for-beginners-course/">Git for Beginners</a></h2>
         <h3>Start Date: 26-12-24</h3>
-      <img src="/assets/1.png" width="50%"><br>
+
+        <!--Update Block | Can be copied-->
       <h3> 26-12-24 Update: Done Module 1</h3>
+      <img src="/assets/1.png" width="50%"><br>
+      <!--Update Block END| Can be copied-->
+
+      
+      <!--Update Block | Can be copied-->
+      <h3> 29-12-24 Update: Done Module 2-8 Covering 3 Sections</h3>
+      <img src="/assets/2.png" width="50%"><br>
+      <!--Update Block END| Can be copied-->
+
+
+
+
+
+
+
+
+      Note: Soon we'll be launching the mobile application for the same. <br><!-- The mobile application for this same website can be downloaded from <a href="lkaf">here</a> and the process to install the application can be viewed from <a href="sd">here</a><br> -->
+  This website is in beta stage, improvements will be done in the future <br> Any queries? Mail at <a href= "mailto:solobirdacademy@gmail.com">solobirdacademy@gmail.com</a>
     </p>
 
 
@@ -140,36 +159,36 @@ header {
     });
 </script>
 
-<!--    
-    <script>
-      // The SHA-256
-      const correctHash = "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"; // Pre-hashed password for "mypassword"
+   <!--
+<script>
+    // The SHA-256 hash of "mypassword" (precomputed)
+    const correctHash = "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"; // Hash for "mypassword"
     
-      // Function to hash the input password using SHA-256
-      async function hashPassword(password) {
-        const encoder = new TextEncoder();
-        const data = encoder.encode(password);
-        const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-        const hashArray = Array.from(new Uint8Array(hashBuffer));
-        return hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+    // Function to hash the entered password using SHA-256
+    async function hashPassword(password) {
+      const encoder = new TextEncoder();
+      const data = encoder.encode(password);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      return hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+    }
+    
+    // Prompt the user for the password
+    const password = prompt("Enter password to access this page:");
+    
+    // Hash the entered password and compare it to the stored hash
+    hashPassword(password).then(hashedPassword => {
+      if (hashedPassword === correctHash) {
+        // Show the protected content if the password is correct
+        document.getElementById("protected-content").style.display = "block";
+      } else {
+        alert("Incorrect password!");
       }
-    
-      // Prompt user for password
-      const password = prompt("Enter password to access this page:");
-    
-      // Hash the entered password and compare it with the stored hash
-      hashPassword(password).then(hashedPassword => {
-        if (hashedPassword === correctHash) {
-          // Show protected content if the hashed password matches
-          document.getElementById("protected-content").style.display = "block";
-        } else {
-          alert("Incorrect password!");
-        }
-      });
-    </script>
-
+    });
+  </script>
 
 -->
+
 
 
 
@@ -196,11 +215,12 @@ header {
     // Set the content of the paragraph with the formatted last modified date and time
     document.getElementById("lastModified").textContent = `Last Modified: ${day} ${month} ${year} ${hours}:${minutes}:${seconds}`;
   </script>
-  Note: Soon we'll be launching the mobile application for the same. <br><!-- The mobile application for this same website can be downloaded from <a href="lkaf">here</a> and the process to install the application can be viewed from <a href="sd">here</a><br> -->
-  This website is in beta stage, improvements will be done in the future <br> Any queries? Mail at <a href= "mailto:solobirdacademy@gmail.com">solobirdacademy@gmail.com</a>
+  
   
 
 </footer>
+
+
 
 </body>
 </html>
